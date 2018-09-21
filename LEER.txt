@@ -1,0 +1,5 @@
+JS      (archivos Java Script)
+IMG     (archivos imagenes de la pagina)
+CSS     (archivos de hojas de estilo)
+PHOTO   (imagenes BD)
+PHP     (archivos php)
