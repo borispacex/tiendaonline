@@ -4,7 +4,8 @@
 <?php
     $conexion = mysqli_connect("localhost","tienda","online","tiendaonline");
     mysqli_set_charset($conexion, "utf8"); //para que los valores aparescan con caracteres en español
-    $peticion = "SELECT * FROM productos";
+    //$peticion = "SELECT * FROM productos";
+    $peticion = "SELECT * FROM productos WHERE existencias>0";
     $resultado = mysqli_query($conexion, $peticion);
     while ($fila = mysqli_fetch_array($resultado)) {
         echo "<article>";

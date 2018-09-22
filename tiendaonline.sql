@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-09-2018 a las 04:04:25
+-- Tiempo de generación: 22-09-2018 a las 13:33:34
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.7
 
@@ -52,7 +52,8 @@ CREATE TABLE `clientes` (
 INSERT INTO `clientes` (`id`, `nombre`, `apellidos`, `email`, `usuario`, `contrasena`, `telefono`, `movil`, `fax`, `direccioncalle`, `codigopostal`, `poblacion`, `pais`, `dninif`) VALUES
 (1, 'Ramiro Jhonatan', 'Pardo Foronda', 'pardoforonda@gmail.com', 'rpardo', 'rpardo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2, 'Juan', 'Lopez', 'lopez@hotmail.com', 'juan', 'lopez', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 'Boris', 'Vargas Paucara', 'borisvargaspaucara@gmail.com', 'boris', 'boris', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(3, 'Boris', 'Vargas Paucara', 'borisvargaspaucara@gmail.com', 'boris', 'boris', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 'admin', 'admin', 'admin@red.com', 'admin', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -154,7 +155,9 @@ INSERT INTO `lineaspedido` (`id`, `idpedido`, `idproducto`, `unidades`) VALUES
 (56, 32, 1, 1),
 (57, 32, 1, 1),
 (58, 32, 1, 1),
-(59, 32, 1, 1);
+(59, 32, 1, 1),
+(60, 33, 1, 1),
+(61, 33, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -204,7 +207,8 @@ INSERT INTO `pedidos` (`id`, `idcliente`, `fecha`, `estado`) VALUES
 (29, 3, '1535760184', '0'),
 (30, 3, '1535761174', '0'),
 (31, 3, '1535761244', '0'),
-(32, 3, '1535761376', '0');
+(32, 3, '1535761376', '0'),
+(33, 3, '1537585226', '0');
 
 -- --------------------------------------------------------
 
@@ -230,7 +234,7 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `peso`, `longitud`, `anchura`, `altura`, `existencias`, `activado`) VALUES
-(1, 'Lámpara Icosaedro', 'Descripción de la lámpara icosaedro', '21.00', 1, 20, 20, 20, 5, 1),
+(1, 'Lámpara Icosaedro', 'Descripción de la lámpara icosaedro', '21.00', 1, 20, 20, 20, 3, 1),
 (2, 'Lámpara cubo', 'Esta es la descripción de la lámpara cubo', '25.00', 1, 25, 25, 25, 17, 1),
 (3, 'Lámpara Estrella', 'Descripción de la lámpara estrella', '18.00', 1, 20, 20, 20, 13, 1);
 
@@ -276,7 +280,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `imagenesproductos`
@@ -288,13 +292,13 @@ ALTER TABLE `imagenesproductos`
 -- AUTO_INCREMENT de la tabla `lineaspedido`
 --
 ALTER TABLE `lineaspedido`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
